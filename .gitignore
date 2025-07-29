@@ -1,0 +1,44 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# VSCode config
+.vscode/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs and session data
+*.log
+data/logs/
+data/session/
+
+# ChromaDB persistent vector storage
+data/vector_db/
+
+# Uploaded PDFs
+data/pdfs/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Environment variables
+.env
+.env.*
+
+# Python notebooks
+*.ipynb_checkpoints
+
+# Ollama model cache (if used locally)
+ollama/

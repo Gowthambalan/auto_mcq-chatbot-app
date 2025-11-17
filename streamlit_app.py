@@ -23,12 +23,12 @@ if "mcqs" in st.session_state:
             selected_option = selected.split(".")[0].strip().upper()  # Extract A/B/C/D
             result = validate_answer(q, selected_option)
             if result["is_correct"]:
-                st.success(f"✅ Correct! Explanation: {result['explanation']}")
+                st.success(f" Correct! Explanation: {result['explanation']}")
             else:
-                st.error(f"❌ Wrong. Correct answer is {result['correct_answer']}. Explanation: {result['explanation']}")
+                st.error(f" Wrong. Correct answer is {result['correct_answer']}. Explanation: {result['explanation']}")
 
 st.divider()
-st.subheader("🧠 Subject Tutor Chatbot")
+st.subheader(" Subject Tutor Chatbot")
 
 # # Initialize chat history
 # if "chat_history" not in st.session_state:
@@ -54,9 +54,9 @@ st.subheader("🧠 Subject Tutor Chatbot")
 # # Display the chat history
 # for msg in st.session_state.chat_history:
 #     if msg["role"] == "user":
-#         st.markdown(f"**👤 You:** {msg['text']}")
+#         st.markdown(f"** You:** {msg['text']}")
 #     else:
-#         st.markdown(f"**🤖 Bot:**\n\n{msg['text']}", unsafe_allow_html=True)
+#         st.markdown(f"** Bot:**\n\n{msg['text']}", unsafe_allow_html=True)
 
 
 if "chat_history" not in st.session_state:
@@ -69,7 +69,7 @@ col1, col2 = st.columns([1, 4])
 with col1:
     send = st.button("Send")
 with col2:
-    clear = st.button("🗑️ Clear Chat")
+    clear = st.button(" Clear Chat")
 
 if send and user_input.strip():
     with st.spinner("Thinking..."):
@@ -83,6 +83,6 @@ if clear:
     # Render chat
 for msg in st.session_state.chat_history:
     if msg["role"] == "user":
-        st.markdown(f"**👤 You:** {msg['text']}")
+        st.markdown(f"** You:** {msg['text']}")
     else:
-        st.markdown(f"**🤖 Bot:**\n\n{msg['text']}", unsafe_allow_html=True)
+        st.markdown(f"** Bot:**\n\n{msg['text']}", unsafe_allow_html=True)

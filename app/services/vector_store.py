@@ -28,6 +28,6 @@ def ingest_to_vector_db(pdf_path: str, subject: str):
         print(f"Error during ingestion: {e}")
         return False
 
-# ✅ New function to list available subjects
+#  New function to list available subjects
 def get_all_subjects():
     return [c.name for c in client.list_collections()]

@@ -64,7 +64,7 @@ def generate_mcq_questions(subject: str, num_questions: int = 15):
     return questions[:num_questions]  # return the question list
 
 
-# ✅ New function to check answer
+#  New function to check answer
 def validate_answer(question_obj: dict, selected_option: str) -> dict:
     correct = selected_option.strip().upper() == question_obj["answer"]
     return {
@@ -76,7 +76,7 @@ def validate_answer(question_obj: dict, selected_option: str) -> dict:
     }
 
 
-# ✅ New function for subject-based chatbot
+# New function for subject-based chatbot
 def chat_with_subject_bot(subject: str, user_question: str) -> str:
     if subject not in [c.name for c in client.list_collections()]:
         return f"No collection found for subject: {subject}"
